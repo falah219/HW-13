@@ -59,10 +59,18 @@ const Navbar = () => {
           </Link>
         )}
         {!isLogin ? (
+          <div>
+            <Link to="/register" onClick={onClose}>
+                <Button  onClick={onOpen} colorScheme="blue">
+                  register
+                </Button>
+              </Link>
+            
+            <Button ml="40px" onClick={onOpen} colorScheme="blue">
+              login
+            </Button>
+          </div>
           
-          <Button onClick={onOpen} colorScheme="blue">
-            register
-          </Button>
         ) : (
           <Button
             colorScheme="blue"
